@@ -15,4 +15,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--Font);
+}
+.wrapper{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body{
+    min-height: 100vh;
+    background: red;
+    font-size: var(--Font-size);
+}
+.card_container{
+    background-color: black;
+}
+.card{
+    max-width: 337px;
+    height: 185px;
+    background-color: yellow;
+    margin: 0 auto;
+    position: relative;
+}
+.card_back{
+    background-image: url("/images/bg-card-back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card_back .cvc{
+    position: absolute;
+    text-align: right;
+    background-color: transparent;
+    padding: 6px;
+    width: 273px;
+    top: 77px;
+    left: 10%;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
 }
