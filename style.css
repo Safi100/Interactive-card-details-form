@@ -38,7 +38,7 @@ body{
     font-size: var(--Font-size);
 }
 .card_container{
-    background-image: url(/images/bg-main-mobile.png);
+    background-image: url("./images/bg-main-mobile.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -109,7 +109,7 @@ body{
     width: 100%;
 }
 .card_front{
-    background-image: url("/images/bg-card-front.png");
+    background-image: url("./images/bg-card-front.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
