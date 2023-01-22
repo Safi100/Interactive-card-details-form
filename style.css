@@ -19,8 +19,11 @@
 }
 .wrapper{
     width: 90%;
-    max-width: 1200px;
+    max-width: 700px;
     margin: 0 auto;
+}
+button{
+    cursor: pointer;
 }
 body{
     min-height: 100vh;
@@ -129,6 +132,7 @@ body{
 }
 .card_details{
     padding: 60px 0;
+    padding-bottom: 30px;
 }
 div label{
     display: block;
@@ -146,7 +150,7 @@ div input{
     outline: none;
     width: 100%;
 }
-div input:focus{
+.input_div input:focus{
     background: linear-gradient(white, white) padding-box, 
     linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
     border-radius: 5px;
@@ -188,5 +192,72 @@ div input::placeholder{
     .card_front{
         order: -1;
         margin: 0;
+    }
+}
+.error{
+    color: var(--Red);
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+.show{
+    display: block;
+}
+.border_error,.border_error:active{
+    border: 1px solid var(--Red) !important;
+}
+.complete{
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+.complete img{
+    margin-bottom: 30px;
+}
+.complete h2{
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.complete p{
+    color: var(--Dark-grayish-violet);
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.hide{
+    display: none;
+}
+@media screen and (min-width:1130px) {
+    .complete {
+        margin: unset;
+    }
+    .container{
+        display: flex;
+        min-height: 100vh;
+    }
+    .card_details{
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .card_container .wrapper .card_back{
+        box-shadow: 2px 2px 36px rgb(0 0 0 / 29%)
+    }
+    .card_container{
+        display: grid;
+        align-items: center;
+        max-width: 400px;
+        /* width: 30%; */
+    }
+    .card_container .wrapper{
+        flex-direction: column;
+        justify-content: unset;
+        margin-left: 200px;
+    }
+    .card_container .wrapper .card_front{
+        margin-bottom: 30px;
+        margin-right: 50px;
     }
 }
