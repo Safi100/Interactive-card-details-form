@@ -58,15 +58,30 @@ form.addEventListener('submit', (e)=> {
     for(let i=1;i<input.length;i++){
         if(input[i].value == ''){
             flag = 0;
-            console.log(input[i]);
             input[i].classList.add('border_error')
             if(i==5){
                 errorr[i-2].classList.add('show')
             }else{
-                errorr[i-1].classList.add('show')
+                if(input[3] == '' || input[4] == '' ){
+                    errorr[2].classList.add('show')
+                }else{
+                    errorr[i-1].classList.add('show')
+                }
             }
         }else{
+            input[i].classList.remove('border_error')
+            if(i==5){
+                errorr[i-2].classList.remove('show')
+            }else{
+                errorr[i-1].classList.remove('show')
+                if(input[3].value != '' && input[4].value != '' ){
+                    errorr[2].classList.remove('show')
+                }else{
+                    errorr[2].classList.add('show')
+                }
+            }
             flag = 1;
+            console.log(flag);
         }
     }
     if(flag){
